@@ -1,3 +1,5 @@
+#https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
+
 def divisibleSumPairs(n, k, ar):
     x = 0
     counter = 0
