@@ -3,12 +3,12 @@
 
 import sys
 
-def catAndMouse(x, y, z):
-    a_Mouse = abs(x - z)
-    b_Mouse = abs(y - z)
-    if a_Mouse == b_Mouse:
+def cat_and_mouse(x, y, z):
+    a_mouse = abs(x - z)
+    b_mouse = abs(y - z)
+    if a_mouse == b_mouse:
         return "Mouse C"
-    elif a_Mouse < b_Mouse:
+    elif a_mouse < b_mouse:
         return "Cat A"
     else:
         return "Cat B"
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     for a0 in range(q):
         x, y, z = input().strip().split(' ')
         x, y, z = [int(x), int(y), int(z)]
-        result = catAndMouse(x, y, z)
-        print (result)
+        result = cat_and_mouse(x, y, z)
+        print(result)
 
 
