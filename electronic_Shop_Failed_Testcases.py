@@ -4,17 +4,18 @@
 import sys
 
 def getMoneySpent(keyboards, drives, s):
-    cost = 0
     spent = 0
     for key in keyboards:
         for usb in drives:
+            # No need to initialize cost up top.  Put variables as close as
+            # possible to where you use them
             cost = key + usb
-            if cost > spent and cost < s:
-                spent = cost
-    if spent > 0:
-        return spent
-    else:
-        return -1
+            # The bug was using < instead of <=
+            if cost <= s:
+                # Usually, it's clear to use max when updating a max value.
+                spent = max(spent, cost)
+    # Python has an inline if syntax that's good for cases like this:
+    return spent if spent > 0 else -1
 
 s,n,m = input().strip().split(' ')
 s,n,m = [int(s),int(n),int(m)]
