@@ -1,6 +1,4 @@
-#!/bin/python3
-
-import sys
+# https://www.hackerrank.com/challenges/between-two-sets/problem
 
 def get_Small(b):
     # Finds the smallest number in Group B

@@ -1,9 +1,10 @@
+
 # Add URL for hacker rank problem:
 # https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
 
-# Python uses "snake-case" (using underscores) for function names.
-# I'm not sure why hacker rank uses the wrong style.
+
 def divisible_sum_pairs(n, k, ar):
+
     x = 0
     counter = 0
     # A while loop with x += 1 is the same a for loop.
