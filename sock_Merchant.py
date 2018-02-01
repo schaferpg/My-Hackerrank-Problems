@@ -2,7 +2,7 @@
 # https://www.hackerrank.com/challenges/sock-merchant/problem
 import sys
 
-def sockMerchant(n, ar):
+def sock_Merchant(n, ar):
     check = []
     test = []
     total = 0
