@@ -1,6 +1,6 @@
 # https://www.hackerrank.com/challenges/bon-appetit/problem
 
-def bonAppetit(n, k, b, ar):
+def bon_Appetit(n, k, b, ar):
     total = 0
     for i in range(len(ar)):
         total += ar[i]
