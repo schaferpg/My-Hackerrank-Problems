@@ -3,18 +3,17 @@
 
 import sys
 
-def getMoneySpent(keyboards, drives, s):
-    cost = 0
-    spent = 0
-    for key in keyboards:
-        for usb in drives:
-            cost = key + usb
-            if cost > spent and cost < s:
-                spent = cost
-    if spent > 0:
-        return spent
+def get_Money_Spent(key, usb, s):
+    cost = total = 0
+    for k in key:
+        for u in usb:
+            total = k + u
+            if total > cost and total <= s:
+                cost = total
+    if cost > 0:
+        return cost
     else:
-        return -1
+        return "-1"
 
 s,n,m = input().strip().split(' ')
 s,n,m = [int(s),int(n),int(m)]
