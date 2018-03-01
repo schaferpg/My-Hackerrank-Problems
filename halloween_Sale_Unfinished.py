@@ -2,19 +2,17 @@
 import sys
 
 def howManyGames(p, d, m, s):
-    counter = 0
-    spent = temp = 20
-    while spent < s:
-        if temp < m:
-            temp = m
-        else:
-            temp -= d
-        spent += temp
+    total = counter = 0
+    price = p
+    while total <= s:
+        total += price
+        if total >= s:
+            break
+        price -= d
+        if price <= m:
+            price = m
         counter += 1
-    if spent > s:
-        return counter - 1
-    else:
-        return counter
+    return counter
 
 if __name__ == "__main__":
     p, d, m, s = input().strip().split(' ')
