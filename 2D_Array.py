@@ -1,7 +1,7 @@
 # https://www.hackerrank.com/challenges/2d-array/problem
 
 # Final prettier Solution
-
+# I know it's bad practice to put hard numbers into the range, would it be better to change it to len(arr) - 2?
 def array2D(arr):
     sum_Arr = []
     for i in range(4):
