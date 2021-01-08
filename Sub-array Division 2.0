@@ -1,0 +1,13 @@
+# https://www.hackerrank.com/challenges/the-birthday-bar/problem
+
+# Find the sum of of the first m valeus in array s
+    for i in range(m):
+        total += s[i]
+        if total == d:
+            count += 1
+    # Subtract the first number and add the next number in the list
+    for i in range(len(s)-m):
+        total = (-s[i] + s[i+m] + total)
+        if total == d:
+            count += 1
+    return count
