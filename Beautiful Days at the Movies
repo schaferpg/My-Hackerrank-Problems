@@ -1,0 +1,19 @@
+# https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+
+def beautifulDays(i, j, k):
+    # Range of numbers i, j
+    # i - reverse(i) % k == 0
+    # Count += 1
+    # Find the range of numbers of i to j
+    arr_Num = []
+    count = 0
+    for s in range(j-i+1):
+        arr_Num.append(s+i)
+    # Find the reverseNum and check to see if it is divisiable by k
+    for i in arr_Num:
+        #Find the reverse of i
+        reverse_Num = int(str(i)[::-1])
+        # Check to see if i - reverse_Num is divisible by k
+        if (i - reverse_Num) % k == 0:
+            count += 1
+    return count
